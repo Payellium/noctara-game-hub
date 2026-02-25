@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://m.media-amazon.com/images/I/81CNH3F8ieL.png",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://wallpapers.com/images/hd/armed-characters-call-of-duty-mobile-logo-5vg3hfcbrfq3nsqw.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "A competitive FPS experience featuring multiplayer modes, battle royale, and iconic maps.",
+    "ratings": "4.6",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Valorant",
+    "coverPhoto": "https://assets.xboxservices.com/assets/4e/bc/4ebcb533-e184-42f3-833b-9aa47a81f39e.jpg?n=153142244433_Poster-Image-1084_1920x720.jpg",
+    "category": "FPS",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "A tactical shooter combining precise gunplay with unique agent abilities.",
+    "ratings": "4.7",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "4",
+    "title": "Fortnite",
+    "coverPhoto": "https://i.ytimg.com/vi/adGdyCdvKz4/maxresdefault.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite/",
+    "description": "A vibrant battle royale game with building mechanics and seasonal updates.",
+    "ratings": "4.4",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "5",
+    "title": "Apex Legends",
+    "coverPhoto": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2022/05/Apex-Legends-Mobile-release-hero.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.ea.com/games/apex-legends",
+    "description": "A hero-based battle royale shooter set in the Titanfall universe.",
+    "ratings": "4.6",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "6",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4oH7UR8Xz9MR2icj0ddL7iXZuVrx-svycUg&s",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "An open-world action RPG featuring elemental combat and immersive storytelling.",
+    "ratings": "4.8",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "7",
+    "title": "Minecraft",
+    "coverPhoto": "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "A sandbox game where players build, explore, and survive in block-based worlds.",
+    "ratings": "4.9",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "8",
+    "title": "Free Fire",
+    "coverPhoto": "https://i.ytimg.com/vi/pKUu6PKNyzk/hqdefault.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "A survival shooter offering quick 10-minute battle royale matches.",
+    "ratings": "4.3",
+    "developer": "Garena"
+  },
+  {
+    "id": "9",
+    "title": "League of Legends",
+    "coverPhoto": "https://www.exitlag.com/blog/wp-content/uploads/2024/10/league-of-legends-download-1.webp",
+    "category": "MOBA",
+    "downloadLink": "https://www.leagueoflegends.com/",
+    "description": "A competitive multiplayer online battle arena game with strategic team fights.",
+    "ratings": "4.7",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "10",
+    "title": "Dota 2",
+    "coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/570/capsule_616x353.jpg?t=1769535998",
+    "category": "MOBA",
+    "downloadLink": "https://www.dota2.com/",
+    "description": "A deep and strategic MOBA game with a massive esports scene.",
+    "ratings": "4.6",
+    "developer": "Valve"
+  },
+  {
+    "id": "11",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://static.wikia.nocookie.net/clashofclans/images/3/33/IMG_5842.JPG/revision/latest?cb=20170625171606",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Build your village, raise an army, and compete in clan wars.",
+    "ratings": "4.5",
+    "developer": "Supercell"
+  },
+  {
+    "id": "12",
+    "title": "Clash Royale",
+    "coverPhoto": "https://static.cybersport.pl/img/375/300/fit/wp-content/uploads/2021/01/clash-royale-supercell.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashroyale/",
+    "description": "Real-time multiplayer battles featuring Clash characters.",
+    "ratings": "4.4",
+    "developer": "Supercell"
+  },
+  {
+    "id": "13",
+    "title": "Among Us",
+    "coverPhoto": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/21905758/releaseWeek_promos3.jpg?quality=90&strip=all&crop=0,5,100,80",
+    "category": "Party",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "A social deduction game where players find the impostor.",
+    "ratings": "4.2",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "14",
+    "title": "Grand Theft Auto V",
+    "coverPhoto": "https://images.sftcdn.net/images/t_app-icon-m/p/b3d17a4e-96bf-11e6-a0d8-00163ed833e7/3978925/gta-v-download-grand-theft-auto-v.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.rockstargames.com/V/",
+    "description": "An open-world action-adventure game set in Los Santos.",
+    "ratings": "4.9",
+    "developer": "Rockstar Games"
+  },
+  {
+    "id": "15",
+    "title": "Roblox",
+    "coverPhoto": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/883F/production/_121297843_roblox1.png",
+    "category": "Sandbox",
+    "downloadLink": "https://www.roblox.com/",
+    "description": "A global platform where users create and play millions of games.",
+    "ratings": "4.4",
+    "developer": "Roblox Corporation"
+  },
+  {
+    "id": "16",
+    "title": "The Witcher 3: Wild Hunt",
+    "coverPhoto": "https://i1.sndcdn.com/artworks-Mnckgkyr334C1360-ZmjZQg-t500x500.jpg",
+    "category": "RPG",
+    "downloadLink": "https://thewitcher.com/en/witcher3",
+    "description": "An award-winning story-driven RPG set in a fantasy world.",
+    "ratings": "4.9",
+    "developer": "CD Projekt Red"
+  },
+  {
+    "id": "17",
+    "title": "EA Sports FC 24",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0aVV4MLQnWSoC-rc0d09DjExqHXT-aJAhug&s",
+    "category": "Sports",
+    "downloadLink": "https://www.ea.com/games/ea-sports-fc",
+    "description": "A realistic football simulation game with authentic teams and leagues.",
+    "ratings": "4.3",
+    "developer": "EA Sports"
+  },
+  {
+    "id": "18",
+    "title": "Need for Speed Heat",
+    "coverPhoto": "https://i.ytimg.com/vi/9ewiJJe_nYI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCoNIjBmgVu4jJQtQghSCy57YitOg",
+    "category": "Racing",
+    "downloadLink": "https://www.ea.com/games/need-for-speed/need-for-speed-heat",
+    "description": "A high-speed racing game with street culture and police chases.",
+    "ratings": "4.4",
+    "developer": "Ghost Games"
+  },
+  {
+    "id": "19",
+    "title": "Cyberpunk 2077",
+    "coverPhoto": "https://konsoloweinfo.s3.eu-central-1.amazonaws.com/wp-content/uploads/2025/06/Cyberpunk_recenzja_Switch2-800x533.jpg",
+    "category": "RPG",
+    "downloadLink": "https://www.cyberpunk.net/",
+    "description": "An open-world RPG set in the futuristic Night City.",
+    "ratings": "4.2",
+    "developer": "CD Projekt Red"
+  },
+  {
+    "id": "20",
+    "title": "Honkai: Star Rail",
+    "coverPhoto": "https://i.ytimg.com/vi/XpQ0TXUnESQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA03tOh8btBdCenkHMOjcdWifgIXw",
+    "category": "RPG",
+    "downloadLink": "https://hsr.hoyoverse.com/",
+    "description": "A turn-based space fantasy RPG with strategic combat and exploration.",
+    "ratings": "4.6",
+    "developer": "HoYoverse"
+  }
+]
