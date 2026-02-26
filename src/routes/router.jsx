@@ -10,6 +10,7 @@ const router = createBrowserRouter([
     {
     path: "/",
     element: <HomeLayout></HomeLayout>,
+    loader: ()=> fetch("/games.json"),
     children: [
       {
 
