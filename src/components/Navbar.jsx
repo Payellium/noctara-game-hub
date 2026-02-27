@@ -4,10 +4,27 @@ import { Link, NavLink } from "react-router";
 const Navbar = () => {
   const links = (
     <>
-      <NavLink to="/" className="font-bold text-lg mr-3 hover:text-purple-800">Home  |</NavLink>
-      <NavLink to="/about" className="font-bold text-lg mr-3 hover:text-purple-800">About  |</NavLink>
-      <NavLink to="/faq" className="font-bold text-lg mr-3 hover:text-purple-800">FAQ  |</NavLink>
-      <NavLink to="/documentation" className="font-bold text-lg hover:text-purple-800">Documentation</NavLink>
+      <NavLink to="/" className="font-bold text-lg mr-3 hover:text-purple-800">
+        Home |
+      </NavLink>
+      <NavLink
+        to="/about"
+        className="font-bold text-lg mr-3 hover:text-purple-800"
+      >
+        About |
+      </NavLink>
+      <NavLink
+        to="/faq"
+        className="font-bold text-lg mr-3 hover:text-purple-800"
+      >
+        FAQ |
+      </NavLink>
+      <NavLink
+        to="/documentation"
+        className="font-bold text-lg hover:text-purple-800"
+      >
+        Documentation
+      </NavLink>
     </>
   );
   return (
@@ -39,7 +56,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link>
-          <h1 className="text-2xl tracking-wide font-extrabold bg-white p-1 border-2 border-purple-400 rounded-tr-2xl rounded-bl-2xl">
+          <h1 className="text-lg md:text-2xl md:tracking-wide font-extrabold bg-white p-1 border-2 border-purple-400 rounded-tr-2xl rounded-bl-2xl">
             <span className="border-2 rounded-full p-1 font-bold text-blue-500 bg-black mr-2">
               N
             </span>
@@ -51,10 +68,24 @@ const Navbar = () => {
 
       <div className="navbar-end">
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal text-purple-300 font-bold px-1">{links}</ul>
+          <ul className="menu menu-horizontal text-purple-300 font-bold px-1">
+            {links}
+          </ul>
         </div>
-        <Link to="/login" className="btn mr-4 bg-white relative inline-block px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg">Login</Link>
-        <Link to="/register" className="btn bg-white relative inline-block px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg">Registration</Link>
+        <div className="flex flex-col-reverse md:flex-row">
+          <Link
+            to="/login"
+            className="btn mr-1 md:mr-4 bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+          >
+            Login
+          </Link>
+          <Link
+            to="/register"
+            className="btn bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+          >
+            Registration
+          </Link>
+        </div>
       </div>
     </div>
   );

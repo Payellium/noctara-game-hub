@@ -7,7 +7,7 @@ const Animation = () => {
       
       {/* Hero Text */}
       <motion.h1
-        className="text-3xl md:text-5xl font-extrabold text-white tracking-widest text-center"
+        className="text-3xl md:text-5xl font-extrabold mb-0 md:mb-6 text-white tracking-widest text-center"
         initial={{ opacity: 0, scale: 0.8, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
@@ -18,7 +18,7 @@ const Animation = () => {
 
       {/* Subheading */}
       <motion.p
-        className="mt-8 text-xl md:text-2xl text-fuchsia-200 text-center max-w-2xl"
+        className="mt-2 md:mt-8 hidden md:block lg:block text-lg md:text-2xl text-fuchsia-200 text-center max-w-2xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1 }}

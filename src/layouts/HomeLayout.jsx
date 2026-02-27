@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Banner from "../components/Banner";
 import { Outlet } from "react-router";
+import Footer from "../components/Footer";
 
 const HomeLayout = () => {
   // console.log(data);
@@ -12,7 +12,9 @@ const HomeLayout = () => {
         <div className="pt-15">
             <Outlet></Outlet>
         </div>
+        <Footer></Footer>
       </header>
+      
     </div>
   );
 };

@@ -7,7 +7,7 @@ import Animation from "./Animation";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="relative">
       <div className="carousel w-full h-full">
         <div id="slide1" className="carousel-item relative brightness-50 w-full">
           <img src={banner2} className="w-full max-h-130 object-cover" />
