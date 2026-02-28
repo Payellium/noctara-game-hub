@@ -27,7 +27,7 @@ const PopularGames = ({ data }) => {
         ))}
       </div>
       <div className="text-center my-5">
-        <Link to="/allGames" className="font-bold text-lg underline">
+        <Link to="/all-games" className="font-bold text-lg underline">
           Explore All Games
         </Link>
       </div>

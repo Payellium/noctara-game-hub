@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const GameDetailsSection = ({ game }) => {
   const {
@@ -54,7 +55,9 @@ const GameDetailsSection = ({ game }) => {
           >
             Download Now
           </a>
+          
         </div>
+        <Link to="/all-games" className="underline hover:text-purple-400">Browse All Games</Link>
       </div>
     </section>
   );

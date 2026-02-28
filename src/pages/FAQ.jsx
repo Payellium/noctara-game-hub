@@ -40,7 +40,6 @@ const FAQ = () => {
 
   return (
     <div>
-      <header><Navbar></Navbar></header>
       <div className="min-h-screen">
         <div className="max-w-5xl mx-auto px-6 md:px-12 py-20">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -76,7 +75,6 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 };

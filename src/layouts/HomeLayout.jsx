@@ -6,15 +6,18 @@ import Footer from "../components/Footer";
 const HomeLayout = () => {
   // console.log(data);
   return (
-    <div className="">
-      <header className="relative w-full h-screen">
+    <div className="relative w-full h-screen">
+      <header>
         <Navbar></Navbar>
+        
+        
+      </header>
+      <main>
         <div className="pt-15">
             <Outlet></Outlet>
         </div>
         <Footer></Footer>
-      </header>
-      
+      </main>
     </div>
   );
 };

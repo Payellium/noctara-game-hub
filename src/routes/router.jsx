@@ -20,38 +20,42 @@ const router = createBrowserRouter([
         loader: () => fetch("/games.json"),
       },
       {
-        path: "/allGames",
+        path: "/all-games",
         element: <AllGames></AllGames>,
         loader: () => fetch("/games.json"),
+      },
+      {
+        path: "/game-details/:id",
+        element: <GameDetails></GameDetails>,
+        loader: () => fetch("/games.json"),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/documentation",
+        element: <Documentation></Documentation>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/faq",
+        element: <FAQ></FAQ>,
       },
     ],
   },
 
   {
-    path: "/documentation",
-    element: <Documentation></Documentation>,
+    path: "/*",
+    element: <h2>Error404</h2>,
   },
-  {
-    path: "/about",
-    element: <About></About>,
-  },
-  {
-    path: "/faq",
-    element: <FAQ></FAQ>,
-  },
-  {
-    path: "/login",
-    element: <Login></Login>,
-  },
-  {
-    path: "/register",
-    element: <Register></Register>,
-  },
-  {
-    path: "/game-details/:id",
-    element: <GameDetails></GameDetails>,
-    loader: ()=> fetch("/games.json"),
-  }
 ]);
 
 export default router;

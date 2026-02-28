@@ -53,9 +53,21 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {links}
+            <Link
+              to="/login"
+              className="btn mr-1 md:mr-4 bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+            >
+              Login
+            </Link>
+            <Link
+              to="/register"
+              className="btn bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+            >
+              Registration
+            </Link>
           </ul>
         </div>
-        <Link>
+        <Link to="/">
           <h1 className="text-lg md:text-2xl md:tracking-wide font-extrabold bg-white p-1 border-2 border-purple-400 rounded-tr-2xl rounded-bl-2xl">
             <span className="border-2 rounded-full p-1 font-bold text-blue-500 bg-black mr-2">
               N
@@ -75,13 +87,13 @@ const Navbar = () => {
         <div className="flex flex-col-reverse md:flex-row">
           <Link
             to="/login"
-            className="btn mr-1 md:mr-4 bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+            className="btn mr-1 hidden md:mr-4 bg-white relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
           >
             Login
           </Link>
           <Link
             to="/register"
-            className="btn bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+            className="btn bg-white hidden relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
           >
             Registration
           </Link>
