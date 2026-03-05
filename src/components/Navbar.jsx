@@ -1,11 +1,16 @@
-import React from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = use(AuthContext);
   const links = (
     <>
       <NavLink to="/" className="font-bold text-lg mr-3 hover:text-purple-800">
         Home |
+      </NavLink>
+      <NavLink to="/all-games" className="font-bold text-lg mr-3 hover:text-purple-800">
+        Game Vault |
       </NavLink>
       <NavLink
         to="/about"
@@ -84,19 +89,27 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className="flex flex-col-reverse md:flex-row">
-          <Link
-            to="/login"
-            className="btn mr-1 hidden md:mr-4 bg-white relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
-          >
-            Login
-          </Link>
-          <Link
-            to="/register"
-            className="btn bg-white hidden relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
-          >
-            Registration
-          </Link>
+        <div className="ml-5">
+          {user ? (
+            <div>
+              {user && user.email} <button className="btn">Log out</button>
+            </div>
+          ) : (
+            <div className="flex flex-col-reverse md:flex-row ml-5">
+              <Link
+                to="/login"
+                className="btn mr-1 hidden md:mr-4 bg-white relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="btn bg-white hidden relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+              >
+                Registration
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

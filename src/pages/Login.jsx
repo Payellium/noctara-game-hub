@@ -1,29 +1,18 @@
-import React, { use } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import React from "react";
+
 import { Link } from "react-router";
-import { AuthContext } from "../Provider/AuthProvider";
+
 
 const Login = () => {
-    const {signIn} = use(AuthContext);
-    const handleSignIn=(e)=>{
-        e.preventDefault();
+  const handleSignIn = (e) => {
+    e.preventDefault();
 
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        // console.log(email, password);
-
-        signIn(email, password)
-        .then(result=>{
-            console.log(result.user);
-        })
-        .catch(error=>{
-            console.log(error);
-        })
-    }
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+  };
   return (
     <div>
-      
       <div className="min-h-screen flex items-center justify-center px-4 pt-24">
         <div className="w-full max-w-md bg-[#111827]/80 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl p-8">
           <h2 className="text-3xl font-extrabold text-center text-white mb-6">
@@ -108,7 +97,6 @@ const Login = () => {
           </p>
         </div>
       </div>
-      
     </div>
   );
 };

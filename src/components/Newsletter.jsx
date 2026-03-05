@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-import app from "../../firebase/firebase.config";
+import {  collection, addDoc } from "firebase/firestore";
 
-const db = getFirestore(app);
+
+
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -10,7 +10,7 @@ const Newsletter = () => {
   const handleSubscribe = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(collection(db, "subscribers"), {
+      await addDoc(collection( "subscribers"), {
         email: email,
         createdAt: new Date(),
       });

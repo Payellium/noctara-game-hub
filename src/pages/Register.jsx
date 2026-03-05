@@ -1,27 +1,29 @@
 import React, { use } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { Link } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
-const Register = () => {
-    const {createUser} = use(AuthContext)
-    const handleRegister=(e)=>{
-        e.preventDefault();
 
-        const name = e.target.name.value;
-        const photo = e.target.photo.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        // console.log(name, photo, email, password)
-        createUser(email, password)
-        .then(result=>{
-            console.log(result.user);
-        })
-        .catch(error=>{
-            console.log(error);
-        })
-    }
+const Register = () => {
+  const {createUser, setUser} = use(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log({name, photo, email, password});
+
+    createUser(email, password)
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+      setUser(user);
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+  };
   return (
     <div>
       <div className="min-h-screen flex items-center justify-center px-4 pt-24">
@@ -37,6 +39,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 placeholder="Your name"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
               />
             </div>
@@ -46,6 +49,7 @@ const Register = () => {
                 type="text"
                 name="photo"
                 placeholder="Your photo"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
               />
             </div>
@@ -55,6 +59,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
               />
             </div>
@@ -65,6 +70,7 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="Enter your password"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
               />
             </div>
