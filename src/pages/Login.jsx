@@ -1,15 +1,26 @@
-import React from "react";
+import React, { use } from "react";
 
-import { Link } from "react-router";
-
+import { Link, useNavigate } from "react-router";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
+  const { signIn } = use(AuthContext);
+  const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+
+    signIn(email, password)
+    .then((result)=>{
+      console.log(result.user);
+      navigate("/");
+    })
+    .catch(error=>{
+      console.log(error);
+    })
   };
   return (
     <div>

@@ -8,6 +8,8 @@ import Register from "../pages/Register";
 import AllGames from "../pages/AllGames";
 import Home from "../pages/Home";
 import GameDetails from "../pages/GameDetails";
+import PrivateRoute from "../Provider/PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/game-details/:id",
-        element: <GameDetails></GameDetails>,
+        element: <PrivateRoute>
+          <GameDetails></GameDetails>
+        </PrivateRoute>,
         loader: () => fetch("/games.json"),
       },
       {
@@ -54,7 +58,7 @@ const router = createBrowserRouter([
 
   {
     path: "/*",
-    element: <h2>Error404</h2>,
+    element: <ErrorPage></ErrorPage>
   },
 ]);
 
