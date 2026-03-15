@@ -2,9 +2,11 @@ import React, { use } from "react";
 
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
+import useTitle from "../useTitle";
 
 const Login = () => {
-  const { signIn } = use(AuthContext);
+  const { signIn, googleSignIn } = use(AuthContext);
+  useTitle("Login");
   const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -22,6 +24,19 @@ const Login = () => {
       console.log(error);
     })
   };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        
+      });
+  };
+
   return (
     <div>
       <div className="min-h-screen flex items-center justify-center px-4 pt-24">
@@ -66,7 +81,7 @@ const Login = () => {
           </form>
           <div>
             <p className="my-3 font-bold">Or,</p>
-            <Link className="btn bg-white w-full text-black border-[#e5e5e5]">
+            <button onClick={handleGoogleSignIn} className="btn bg-white w-full font-medium text-black border-[#e5e5e5]">
               <svg
                 aria-label="Google logo"
                 width="16"
@@ -95,7 +110,7 @@ const Login = () => {
                 </g>
               </svg>
               Login with Google
-            </Link>
+            </button>
           </div>
           <p className="text-center text-gray-400 mt-6">
             Don't have an account?{" "}

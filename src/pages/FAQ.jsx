@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import useTitle from "../useTitle";
 
 const FAQ = () => {
-  // Example questions and answers
+  useTitle("FAQ");
   const faqs = [
     {
       question: "What is Noctara?",

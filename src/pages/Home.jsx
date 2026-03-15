@@ -3,9 +3,11 @@ import Banner from '../components/Banner';
 import PopularGames from '../components/PopularGames';
 import { useLoaderData } from 'react-router';
 import Newsletter from '../components/Newsletter';
+import useTitle from '../useTitle';
 
 const Home = () => {
-    const data = useLoaderData()
+    const data = useLoaderData();
+    useTitle("Home")
     return (
         <div>
             <Banner></Banner>

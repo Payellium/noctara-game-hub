@@ -1,8 +1,9 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import useTitle from "../useTitle";
+
 
 const Documentation = () => {
+  useTitle("Documentation")
   return (
     <div>
       <div className="min-h-screen ">

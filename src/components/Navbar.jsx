@@ -1,7 +1,6 @@
 import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
-import userIcon from "../assets/icons8-user-50.png"
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
@@ -74,18 +73,29 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {links}
-            <Link
-              to="/login"
-              className="btn mr-1 md:mr-4 bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
-            >
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="btn bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
-            >
-              Registration
-            </Link>
+            {user ? (
+              <button
+                onClick={handleLogout}
+                className="btn  md:mr-4 bg-white relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+              >
+                Log out
+              </button>
+            ) : (
+              <div>
+                <Link
+                  to="/login"
+                  className="btn mr-1 md:mr-4 bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="btn bg-white relative inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"
+                >
+                  Registration
+                </Link>
+              </div>
+            )}
           </ul>
         </div>
         <Link to="/">
@@ -108,9 +118,14 @@ const Navbar = () => {
         <div className="ml-5">
           {user ? (
             <div className="flex items-center gap-2">
-              <img
+              {/* <img
                 className="w-9 h-9 rounded-full"
                 src={userIcon}
+                alt="user"
+              /> */}
+              <img
+                className="w-10 h-10 rounded-full border"
+                src={user?.photoURL}
                 alt="user"
               />
               <button

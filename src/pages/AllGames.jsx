@@ -1,10 +1,12 @@
 import React from "react";
 import { useLoaderData } from "react-router";
 import GameCard from "../components/GameCard";
+import useTitle from "../useTitle";
 
 const AllGames = () => {
   const data = useLoaderData();
-  console.log(data);
+  useTitle("Game Vault")
+  // console.log(data);
   return (
     <div className="max-w-300 mx-auto">
       <h1

@@ -1,9 +1,14 @@
-import React, { use } from "react";
-import { Link } from "react-router";
+import React, { use, useState } from "react";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
+import useTitle from "../useTitle";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, googleSignIn } = use(AuthContext);
+  const [error, setError] = useState("");
+  
+  const navigate = useNavigate();
+  useTitle("Register");
   const handleRegister = (e) => {
     e.preventDefault();
 
@@ -11,16 +16,38 @@ const Register = () => {
     const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log({ name, photo, email, password });
+    // console.log({ name, photo, email, password });
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    if (!passwordRegex.test(password)) {
+      setError ("Password must have at least 6 characters, one uppercase letter, and one lowercase letter.");
+    }
+    else{
+      setError("");
+    }
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
         setUser(user);
+        navigate("/")
       })
       .catch((error) => {
         console.log(error);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -74,7 +101,7 @@ const Register = () => {
                 className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
               />
             </div>
-
+            <p className="text-red-500">{error}</p>
             <button
               type="submit"
               className="w-full py-3 rounded-lg bg-purple-600 hover:bg-purple-700 transition font-semibold text-white shadow-lg shadow-purple-500/30"
@@ -84,7 +111,10 @@ const Register = () => {
           </form>
           <div>
             <p className="my-3 font-bold">Or,</p>
-            <Link className="btn bg-white w-full text-black border-[#e5e5e5]">
+            <button
+              onClick={handleGoogleSignIn}
+              className="btn bg-white w-full text-black border-[#e5e5e5]"
+            >
               <svg
                 aria-label="Google logo"
                 width="16"
@@ -113,7 +143,7 @@ const Register = () => {
                 </g>
               </svg>
               Login with Google
-            </Link>
+            </button>
           </div>
 
           <p className="text-center text-gray-400 mt-6">
