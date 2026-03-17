@@ -1,11 +1,11 @@
-import React, { use } from "react";
-
-import { Link, useNavigate } from "react-router";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import useTitle from "../useTitle";
 
 const Login = () => {
-  const { signIn, googleSignIn } = use(AuthContext);
+  const { signIn, googleSignIn, forgotPassword } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
   useTitle("Login");
   const navigate = useNavigate();
   const handleSignIn = (e) => {
@@ -16,13 +16,13 @@ const Login = () => {
     console.log(email, password);
 
     signIn(email, password)
-    .then((result)=>{
-      console.log(result.user);
-      navigate("/");
-    })
-    .catch(error=>{
-      console.log(error);
-    })
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleGoogleSignIn = () => {
@@ -33,7 +33,20 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
-        
+      });
+  };
+
+  const handleForgotPassword = () => {
+    if (!email) {
+      alert("Please enter your email first");
+      return;
+    }
+    forgotPassword(email)
+      .then(() => {
+        alert("Password reset email sent");
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -52,6 +65,8 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
               />
             </div>
@@ -67,9 +82,12 @@ const Login = () => {
             </div>
 
             <div>
-              <a className="font-medium hover:text-blue-500" href="">
+              <p
+                onClick={handleForgotPassword}
+                className="font-medium hover:text-blue-500"
+              >
                 Forgot Password?
-              </a>
+              </p>
             </div>
 
             <button
@@ -81,7 +99,10 @@ const Login = () => {
           </form>
           <div>
             <p className="my-3 font-bold">Or,</p>
-            <button onClick={handleGoogleSignIn} className="btn bg-white w-full font-medium text-black border-[#e5e5e5]">
+            <button
+              onClick={handleGoogleSignIn}
+              className="btn bg-white w-full font-medium text-black border-[#e5e5e5]"
+            >
               <svg
                 aria-label="Google logo"
                 width="16"

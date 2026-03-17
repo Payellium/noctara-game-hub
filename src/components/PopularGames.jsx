@@ -1,6 +1,6 @@
 import React from "react";
 import GameCard from "./GameCard";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import downArrow from "../assets/icons8-down-arrow-50.png";
 
 const PopularGames = ({ data }) => {

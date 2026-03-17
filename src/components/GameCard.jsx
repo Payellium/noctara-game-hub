@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const GameCard = ({ game }) => {
   const {id, coverPhoto, title, description, category, ratings} = game;

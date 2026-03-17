@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { useLoaderData } from "react-router";
+import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import GameDetailsCard from "../components/GameDetailsCard";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 const GameDetails = () => {
   const data = useLoaderData();

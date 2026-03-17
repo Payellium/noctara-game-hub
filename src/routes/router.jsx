@@ -1,4 +1,3 @@
-import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layouts/HomeLayout";
 import Documentation from "../pages/Documentation";
 import About from "../pages/About";
@@ -10,6 +9,9 @@ import Home from "../pages/Home";
 import GameDetails from "../pages/GameDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
+import { createBrowserRouter } from "react-router-dom";
+import MyProfile from "../pages/MyProfile";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -28,9 +30,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/game-details/:id",
-        element: <PrivateRoute>
-          <GameDetails></GameDetails>
-        </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <GameDetails></GameDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/games.json"),
       },
       {
@@ -53,12 +57,20 @@ const router = createBrowserRouter([
         path: "/faq",
         element: <FAQ></FAQ>,
       },
+      {
+        path: "/profile",
+        element: <MyProfile></MyProfile>,
+      },
+      {
+        path: "/profile/update-profile",
+        element: <UpdateProfile></UpdateProfile>
+      }
     ],
   },
 
   {
     path: "/*",
-    element: <ErrorPage></ErrorPage>
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 

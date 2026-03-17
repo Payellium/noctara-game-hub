@@ -1,6 +1,7 @@
 import React, { use } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
@@ -123,11 +124,13 @@ const Navbar = () => {
                 src={userIcon}
                 alt="user"
               /> */}
-              <img
-                className="w-10 h-10 rounded-full border"
-                src={user?.photoURL}
-                alt="user"
-              />
+              <Link to="/profile">
+                <img
+                  className="w-10 h-10 rounded-full border"
+                  src={user?.photoURL}
+                  alt="user"
+                />
+              </Link>
               <button
                 onClick={handleLogout}
                 className="btn mr-1 hidden md:mr-4 bg-white relative md:inline-block px-3 md:px-6 py-2 border border-purple-400 text-purple-400 font-bold rounded transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg"

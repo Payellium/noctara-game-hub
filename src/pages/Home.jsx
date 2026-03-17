@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import PopularGames from '../components/PopularGames';
-import { useLoaderData } from 'react-router';
+import { useLoaderData } from 'react-router-dom';
 import Newsletter from '../components/Newsletter';
 import useTitle from '../useTitle';
 
