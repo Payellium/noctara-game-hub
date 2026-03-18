@@ -1,24 +1,18 @@
 import { useState } from "react";
-import {  collection, addDoc } from "firebase/firestore";
-
-
-
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
-    try {
-      await addDoc(collection( "subscribers"), {
-        email: email,
-        createdAt: new Date(),
-      });
-      alert("Welcome to Noctara Elite 🔥");
-      setEmail("");
-    } catch (error) {
-      console.error("Error adding email: ", error);
-      alert("Oops! Something went wrong.");
+    
+    if(!email){
+      setMessage("Please enter your email");
+    }
+    else{
+      setMessage("Subscribed Successfully!");
+      setEmail("")
     }
   };
 
@@ -52,6 +46,7 @@ const Newsletter = () => {
             Subscribe
           </button>
         </form>
+        {message && <p className="mt-3">{message}</p>}
       </div>
     </section>
   );

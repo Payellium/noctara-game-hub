@@ -1,16 +1,22 @@
-# React + Vite
+##### NOCTARA Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* Live website link
 
-Currently, two official plugins are available:
+* Project Purpose-->
+Noctara Game Hub is a modern gaming platform where users can explore different games, view details, and manage their profiles. The goal of this project is to create an interactive and visually appealing gaming website using React and Firebase. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Key Features-->
+ - User Authentication (Email & Password + Google Sign-In)
+ - User Profile Update (Name & Photo)
+ - Browse All Games
+ - Game Details Page
+ - Newsletter Subscription Section
+ - Modern UI with responsive design
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ * NPM Packages Used
+- react
+- react-router
+- firebase
+- react-icons
+- tailwindcss
+- motion library
