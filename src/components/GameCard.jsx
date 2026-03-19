@@ -6,7 +6,7 @@ const GameCard = ({ game }) => {
   return (
     <Link to={`/game-details/${id}`}>
       <div
-        className="w-96 cursor-pointer rounded-xl overflow-hidden
+        className=" w-full cursor-pointer rounded-xl overflow-hidden
                 bg-white/10 backdrop-blur-lg border border-white/10
                 hover:scale-105 transition-transform duration-300"
       >
