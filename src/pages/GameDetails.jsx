@@ -8,7 +8,7 @@ const GameDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
   const [game, setGame] = useState({});
-  console.log(data, id, game);
+  // console.log(data, id, game);
 
   useEffect(() => {
     const gameDetails = data.find((singleGame) => singleGame.id == id);

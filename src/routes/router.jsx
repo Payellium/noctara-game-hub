@@ -12,6 +12,7 @@ import ErrorPage from "../pages/ErrorPage";
 import { createBrowserRouter } from "react-router-dom";
 import MyProfile from "../pages/MyProfile";
 import UpdateProfile from "../pages/UpdateProfile";
+import Loading from "../components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -22,11 +23,13 @@ const router = createBrowserRouter([
         path: "",
         element: <Home></Home>,
         loader: () => fetch("/games.json"),
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: "/all-games",
         element: <AllGames></AllGames>,
         loader: () => fetch("/games.json"),
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: "/game-details/:id",
@@ -36,6 +39,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/games.json"),
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: "/login",

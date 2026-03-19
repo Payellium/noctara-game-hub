@@ -30,7 +30,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         setUser(user);
         navigate("/")
       })
@@ -42,7 +42,7 @@ const Register = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         navigate("/");
       })
       .catch((error) => {
